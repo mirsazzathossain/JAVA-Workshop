@@ -1,7 +1,7 @@
   
 ### NetBeans ###
 nbproject/private/
-nppriject/*
+nbproject/
 build.xml
 manifest.mf
 nbproject/Makefile-*.mk
