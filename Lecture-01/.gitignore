@@ -1,7 +1,7 @@
   
 ### NetBeans ###
 nbproject/private/
-nppriject/
+nppriject/*
 build.xml
 manifest.mf
 nbproject/Makefile-*.mk
@@ -11,3 +11,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+.gitignore
