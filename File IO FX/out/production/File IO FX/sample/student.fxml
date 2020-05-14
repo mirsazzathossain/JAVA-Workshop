@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <SplitPane dividerPositions="0.3341708542713568" layoutX="169.0" layoutY="48.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="598.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="ID: " />
+                        <Label layoutX="14.0" layoutY="52.0" text="Name: " />
+                        <Label layoutX="14.0" layoutY="91.0" text="CGPA: " />
+                        <TextField fx:id="idTxt" layoutX="84.0" layoutY="10.0" prefHeight="25.0" prefWidth="218.0" promptText="Please enter your ID" />
+                        <TextField fx:id="nameTxt" layoutX="84.0" layoutY="48.0" prefHeight="25.0" prefWidth="218.0" promptText="Please enter your name" />
+                        <TextField fx:id="cgpaTxt" layoutX="84.0" layoutY="87.0" prefHeight="25.0" prefWidth="218.0" promptText="Please enter your CGPA" />
+                        <Button fx:id="addToTblBtn" layoutX="409.0" layoutY="15.0" mnemonicParsing="false" onAction="#addToBtnActionPerformed" prefHeight="91.0" prefWidth="175.0" style="-fx-background-color: rgb(0, 140, 186);" text="Add to Table" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font></Button>
+                        <Label fx:id="errorID" layoutX="310.0" layoutY="14.0" prefHeight="17.0" prefWidth="91.0" textFill="RED">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="errorName" layoutX="310.0" layoutY="52.0" prefHeight="17.0" prefWidth="91.0" textFill="RED">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="errorCGPA" layoutX="310.0" layoutY="91.0" prefHeight="17.0" prefWidth="91.0" textFill="RED">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="598.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="180.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="262.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="96.0" prefWidth="107.0">
+                                 <children>
+                                    <TableView fx:id="table" layoutX="207.0" layoutY="-45.0" prefHeight="130.0" prefWidth="596.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_hl" prefWidth="140.0" text="Is in Honor List?" />
+                                        <TableColumn fx:id="col_id" prefWidth="124.0" text="ID" />
+                                          <TableColumn fx:id="col_name" prefWidth="239.0" text="Name" />
+                                          <TableColumn fx:id="col_cgpa" prefWidth="92.0" text="CGPA" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane prefHeight="123.0" prefWidth="596.0">
+                                 <children>
+                                    <Button layoutX="133.0" layoutY="14.0" mnemonicParsing="false" onAction="#writeToTextAction" prefHeight="40.0" prefWidth="330.0" text="Write to Text file" />
+                                    <Button layoutX="133.0" layoutY="73.0" mnemonicParsing="false" onAction="#displayAction" prefHeight="40.0" prefWidth="330.0" text="Display Honor List summary to console " />
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
